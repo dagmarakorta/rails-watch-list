@@ -9,6 +9,9 @@ gem "rails", "~> 7.0.3"
 # To store the token from my cloudinary
 gem "dotenv-rails", groups: [:development, :test]
 
+# Store images uploaded by the user
+gem "cloudinary"
+
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
