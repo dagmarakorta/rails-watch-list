@@ -1,0 +1,15 @@
+<h1>New bookmark</h1>
+  <%= simple_form_for [@list, @bookmark] do |f| %>
+    <% if @bookmark.errors.any? %>
+      <div class="alert alert-danger" role="alert">
+        <%= @bookmark.errors.full_messages.join(", ") %>
+      </div>
+    <% end %>
+    <%= f.input :comment %>
+    <%= f.association :movie,
+      collection: Movie.all,
+      include_hidden: false
+    %>
+    <%= f.submit "Add tag", class: 'btn btn-primary' %>
+  <% end %>
+s

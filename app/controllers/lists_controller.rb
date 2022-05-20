@@ -5,6 +5,7 @@ class ListsController < ApplicationController
 
   def show
     set_list
+    @bookmarks = @list.bookmarks
   end
 
   def new

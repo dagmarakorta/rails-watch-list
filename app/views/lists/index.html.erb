@@ -1,7 +1,18 @@
-
-
-<% @lists.each do |list| %>
-  <div class="card">
-    <%= list.name %>
+<div class="banner">
+  <div class="container">
+    <h1>Save any kind of movies!</h1>
+    <p>Create your lists and add movies you like</p>
+    <a class="btn btn-flat" href="#">Apply now</a>
   </div>
-<% end %>
+</div>
+
+<div class="">
+  <% @lists.each do |list| %>
+    <div class="card">
+      <%= link_to list.name, list_path(list) %>
+    </div>
+  <% end %>
+
+<%= link_to "+ New list", new_list_path %>
+
+</div>
